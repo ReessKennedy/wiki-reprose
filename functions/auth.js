@@ -1,4 +1,6 @@
 export async function onRequest({ request, env }) {
+  console.log("Redirect URI:", env.REDIRECT_URI);
+
   const code = new URL(request.url).searchParams.get("code");
 
   if (!code) {
