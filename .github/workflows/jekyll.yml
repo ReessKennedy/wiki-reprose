@@ -58,8 +58,8 @@ jobs:
           MY_APP_CLIENT_SECRET: ${{ secrets.MY_APP_CLIENT_SECRET }}
           GITHUB_AUTH_SCOPE: "repo,user"
           GITHUB_SITE_URL: "https://github.com"
-          REDIRECT_URI: "https://docs.resskennedy.com/auth"
-          HOME_URL: "https://docs.resskennedy.com/"
+          REDIRECT_URI: "https://docs.reesskennedy.com/auth"
+          HOME_URL: "https://docs.reesskennedy.com/"
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
