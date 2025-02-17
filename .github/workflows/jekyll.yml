@@ -54,6 +54,12 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+          MY_APP_CLIENT_ID: ${{ secrets.MY_APP_CLIENT_ID }}
+          MY_APP_CLIENT_SECRET: ${{ secrets.MY_APP_CLIENT_SECRET }}
+          GITHUB_AUTH_SCOPE: "repo,user"
+          GITHUB_SITE_URL: "https://github.com"
+          REDIRECT_URI: "https://reesskennedy.github.io/wiki-reprose/auth"
+          HOME_URL: "https://reesskennedy.github.io/wiki-reprose"
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3

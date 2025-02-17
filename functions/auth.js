@@ -3,7 +3,7 @@ export async function onRequest({ request, env }) {
 
   if (!code) {
     const params = new URLSearchParams({
-      client_id: env.GITHUB_APP_CLIENT_ID,
+      client_id: env.MY_APP_CLIENT_ID,
       scope: env.GITHUB_AUTH_SCOPE,
       redirect_uri: env.REDIRECT_URI,
     });
@@ -16,8 +16,8 @@ export async function onRequest({ request, env }) {
 
   try {
     const params = new URLSearchParams({
-      client_id: env.GITHUB_APP_CLIENT_ID,
-      client_secret: env.GITHUB_APP_CLIENT_SECRET,
+      client_id: env.MY_APP_CLIENT_ID,
+      client_secret: env.MY_APP_CLIENT_SECRET,
       redirect_uri: env.REDIRECT_URI,
       code,
     });
